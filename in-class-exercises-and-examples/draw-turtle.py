@@ -1,5 +1,5 @@
 # Instructions for this exercise are here https://realpython.com/beginners-guide-python-turtle/
-abyss = input("Gaze into the abyss? (Type yes or no):")
+abyss = input("Gaze into the abyss? (Type yes or no): ")
 if abyss == "yes":
     # basic setup
     import turtle
@@ -15,7 +15,6 @@ if abyss == "yes":
     t.shape("triangle")
     t.pensize(1)
     t.speed(15)
-
 
     # movement
     # t.right(90)
@@ -93,7 +92,7 @@ if abyss == "yes":
     for i in range(7):
         t.pensize(p)
         t.goto((x + 57), (y+100))
-        t.goto((x -57), (y+100))
+        t.goto((x - 57), (y+100))
         t.goto(x, y)
         y = y + 51
         p = p + 1
@@ -104,6 +103,7 @@ if abyss == "yes":
     t.penup()
     t.goto(0, -503)
     t.pendown()
+
     # for loop circles, bottom only
     p = 7
     c = 145
