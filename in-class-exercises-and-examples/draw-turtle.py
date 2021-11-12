@@ -5,14 +5,17 @@ if abyss == "yes":
     import turtle
     s = turtle.getscreen()
     t = turtle.Turtle()
-    turtle.bgcolor("#8A6A89")
+    turtle.bgcolor("#463745")
     turtle.title("Ceci n'est pas une Turtle")
     t.shapesize(1, 1, 1)
-    t.fillcolor("#8A6A89")
+    turtle.fillcolor("#463745")
+    turtle.pencolor("#463745")
+    t.fillcolor("#463745")
     t.pencolor("#FFBB53")
     t.shape("triangle")
     t.pensize(1)
     t.speed(15)
+
 
     # movement
     # t.right(90)
@@ -82,27 +85,43 @@ if abyss == "yes":
     t.penup()
     t.goto(0, 113)
     t.pendown()
-    t.pensize(1)
 
     # for loop triangles, top only
+    x = 0
     y = 113
     p = 1
     for i in range(7):
         t.pensize(p)
-        t.goto(57, (y+100))
-        t.goto(-57, (y+100))
-        t.goto(0, y)
+        t.goto((x + 57), (y+100))
+        t.goto((x -57), (y+100))
+        t.goto(x, y)
         y = y + 51
         p = p + 1
         t.penup()
-        t.goto(0, y)
+        t.goto(x, y)
         t.pendown()
 
-    # for loop triangles, right only
+    t.penup()
+    t.goto(0, -503)
+    t.pendown()
+    # for loop circles, bottom only
+    p = 7
+    c = 145
+    x = 0
+    y = -503
+    for j in range(7):
+        t.pensize(p)
+        t.circle(c)
+        y = y - 176
+        c = c + 100
+        p = p - 1
+        t.penup()
+        t.goto(x, y)
+        t.pendown()
 
     # turtle leaves the arena
     t.penup()
-    t.goto(0, 500)
+    t.goto(0, -500)
     t.pendown()
 
     # keeps the window open
