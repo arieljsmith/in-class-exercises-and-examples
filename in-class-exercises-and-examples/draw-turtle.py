@@ -3,7 +3,7 @@ abyss = input("Gaze into the abyss? (Type yes or no): ")
 if abyss == "yes":
     # basic setup
     import turtle
-    s = turtle.getscreen()
+    # s = turtle.getscreen()
     t = turtle.Turtle()
     turtle.bgcolor("#463745")
     turtle.title("Ceci n'est pas une Turtle")
