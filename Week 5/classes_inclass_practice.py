@@ -44,13 +44,15 @@ class Band:
     def __str__(self):
         return self.name
     # ***IF YOU WERE TO MAKE THE BELOW A @Property, THEN...
+
     def show_members(self):
         print(f"The members of {mouse_rat.name} are: ", [f"{member}" for member in mouse_rat.members])
+
 
 mouse_rat = Band("Mouse Rat")
 print(f"The members of {mouse_rat.name} are {mouse_rat.members}")
 
-mouse_rat.members.extend([snoop, jewel]) # Extend is used in place of append when you want to add multiples at one time
+mouse_rat.members.extend([snoop, jewel])  # Extend is used in place of append when you want to add multiples at one time
 
 print(f"The members of {mouse_rat.name} are: ", [f"{member}" for member in mouse_rat.members])
 # create a new musician instances
@@ -67,4 +69,20 @@ mouse_rat.show_members()
 avril = Musician("Avril Lavigne", "vocals")
 
 mouse_rat.members.append(avril)
+# print out the new band members
+mouse_rat.show_members()
+# get values of attributes for new members
+member_info_tuples = [("Laurell", "harmonica"), ("Vanessa", "drums"), ("Samuel", "piano")]
+
+# new_members = []
+# create a musician instance for each new member and add them to the new_members list
+for member_tuple in member_info_tuples:
+    name, instrument = member_tuple
+    new_member = Musician(name, instrument)
+    # add that new member to mouse_rat members
+    mouse_rat.members.append(new_member)
+
+# add new_members to mouse_rat.members
+# mouse_rat.members.extend(new_members)
+
 mouse_rat.show_members()
